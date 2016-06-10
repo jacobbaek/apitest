@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="page">
+  <h1>Flaskr</h1>
+  {% block body %}
+      <ul class="entries">
+          <li>{{ val1 }}</li>
+          <li>{{ val2 }}</li>
+          <li>{{ val3 }}</li>
+      </ul>
+  </ul>
+  <div class="cpuinfo">{{ val4 }}</div>
+  {% endblock %}
+</div>
