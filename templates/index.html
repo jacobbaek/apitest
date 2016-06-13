@@ -1,13 +1,31 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <div class="page">
-  <h1>Flaskr</h1>
   {% block body %}
-      <ul class="entries">
-          <li>{{ val1 }}</li>
-          <li>{{ val2 }}</li>
-          <li>{{ val3 }}</li>
-      </ul>
-  </ul>
-  <div class="cpuinfo">{{ val4 }}</div>
-  {% endblock %}
+  <h1>Information</h1>
+      <div class="info">
+          <ul class="entries">
+              <h3>Memory</h3>
+              <h3>Cpu</h3>
+
+              <h3>Interfaces</h3>
+              {% for iface in interfaces %}
+                <li> {{ iface }} </li>
+              {% endfor %}
+          </ul>
+      </div>
+  <h1>Policy</h1>
+     <div class="info">
+          <ul class="entries">
+              <h3>expired</h3>
+              <h3>running</h3>
+          </ul>
+      </div>
+  <h1>Rules</h1>
+     <div class="info">
+          <ul class="entries">
+              <h3>enabled</h3>
+              <h3>disabled</h3>
+          </ul>
+      </div>
+    {% endblock %}
 </div>
